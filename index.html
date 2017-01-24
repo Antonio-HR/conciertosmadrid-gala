@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang = "es">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "keywords" content = ""> 
+		<meta name = "description" content =""> 
+		<meta name = "author" content = "Antonio Hernandez">
+		<link rel = "shortcut icon" href= "img/gala_logo.png">
+		<link rel="stylesheet" href="css/cartodb.css" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">     	
+		<title>Salas de Madrid | GALA</title>
+	</head>
+	<body>
+		<header>	
+			<h1>El rock reina en las salas de Madrid, según last.fm</h1>
+			<span id="leak"><author><a href="https://twitter.com/a_ahr1">Antonio Hernández</a></author> - Consulta las salas de eventos de la capital, por cantidad de conciertos y género más representativo. Una visualización creada en el seno del proyecto <b><a href="http://gala.muimota.net/" title="GALA">GALA</a></b>. La fuente de datos fue <b><a href="http://www.last.fm/es/" title="last.fm">last.fm</a></b>.</span>
+		</header>
+		<div id="content">
+			<div id="mapa">	
+			</div>
+			<nav id="selector">
+				<ul>
+					<a href="#leak">
+						<li class="selected" data = "todos">TODOS</li>
+					</a>
+					<a href="#leak">
+						<li data = "rock">Rock</li>
+					</a>
+					<a href="#leak">
+						<li data = "pop">Pop</li>
+					</a>
+					<a href="#leak">
+						<li data = "electronic">Electronica</li>
+					</a>
+					<a href="#leak">
+						<li data = "folk">Folk</li>
+					</a>
+					<a href="#leak">
+						<li data = "jazz">Jazz</li>	
+					</a>
+				</ul>
+			</nav>
+			<img src="img/gala_logo.png">
+			<article>
+				<h2>Metodología</h2>
+				<p>Para realizar está visualización se usaron datos scrapeados por <a href="https://github.com/muimota">Martín Nadal</a> de la web <a href="http://www.last.fm/es/" title="last.fm">last.fm</a>,  en el marco de su proyecto, <a href="http://gala.muimota.net/" title="GALA">GALA</a>. Se tuvieron en cuenta los datos relativos a las salas madrileñas que tuvieron más de 20 conciertos desde su creación -106, en total- y el género musical mayoritario porcentualmente. 
+
+				<p>Se usaron las categorías generales rock, pop, electronic, folk y jazz, que a su vez sirven para englobar subgeneros. Por ejemplo, el hard rock, o el heavy metal se agrupan bajo la etiqueta rock, y el house y el techno, bajo electronic.</p> 
+
+				<p>La muestra se limpió con Open Refine, herramienta que también se usó para <a href="https://github.com/OpenRefine/OpenRefine/wiki/Geocoding">geolocalizar las diferentes salas de conciertos</a>. Posteriormente, se usó Excel para el análisis. Los datos se mapearon con Carto y se dotó a la aplicación de interactividad a través de la librería de la propia herramienta, <a href="https://carto.com/docs/carto-engine/carto-js">carto.js</a>. El dataset se puede descargar <a href="https://docs.google.com/spreadsheets/d/166cfjELm0NlSK5jsHRBCjF0Jt5UZipMqOgqnG2l9DT4/edit?usp=sharing">aquí</a>. El logo y la paleta de colores fueron diseñados por Marta Jurado.</p>
+			</article>
+			<footer>
+				<author>Antonio Hernández | GALA</author><address href = "antonio92.ahr@gmail.com">antonio92.ahr@gmail.com</address>
+				<p><time pubdate = "09-05-2016">5 de octubre de 2016</time>	
+			</footer>
+		</div>
+		<script src="js/cartodb.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
