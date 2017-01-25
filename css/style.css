@@ -171,7 +171,7 @@ html, body, #mapa {
 }
 @media only screen and (max-width: 700px){
       #mapa {
-            height: 490;
+            height: 480px;
       }
 }
 @media only screen and (max-width: 400px){
